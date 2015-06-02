@@ -1,0 +1,67 @@
+Rook:
+  Init: d20 + 10
+  Perception: d20 + 25
+  Fort: d20 + 11
+  Ref: d20 + 18
+  Will: d20 + 9
+  To Hit Dagger 1 (acid): d20 + 19
+  To Hit Dagger 2 (acid): d20 + 14
+  To Hit Dagger 3 (acid): d20 + 9
+  To Hit Dagger 1 (frost): d20 + 19
+  To Hit Dagger 2 (frost): d20 + 16
+  To Hit Dagger 3 (frost): d20 + 11
+  Damage Melee Dagger: d4 + d6 + 7
+  Damage Melee Dagger Sneak Attack: d4 + d6 + 7 + 8*d8
+  Damage Melee Dagger Crit: d4 + d6 + 7 + d10
+  Damage Melee Dagger Sneak Attack Crit: d4 + d6 + 7 + 8*d8 + d10
+  Damage Ranged Dagger: d4 + 7
+  Damage Ranged Dagger Sneak Attack: d4 + 7 + 8*d8
+  CMB: d20 + 17
+  Str: d20 + 5
+  Dex: d20 + 6
+  Con: d20 + 3
+  Int: d20 + 3
+  Wis: d20 + 2
+  Cha: d20 + 3
+  Acrobatics: d20 + 25
+  Bluff: d20 + 22
+  Disable Device: d20 + 25
+  Disguise: d20 + 22
+  Escape Artist: d20 + 25
+  Knowledge Local: d20 + 22
+  Sense Motive: d20 + 21
+  Sleight of Hand: d20 + 32
+  Sleight of Hand Conceal Blade: d20 + 32 + 8
+  Stealth: d20 + 31
+  Use Magic Device: d20 + 22
+Steev:
+  Init: d20 + 5
+  Perception: d20 + 23
+  Fort: d20 + 11
+  Ref: d20 + 13
+  Will: d20 + 15
+  To Hit Unarmed Strike: d20 + 19
+  To Hit Flurry 1: d20 + 19
+  To Hit Flurry 2: d20 + 19
+  To Hit Flurry 3: d20 + 14
+  To Hit Flurry 4: d20 + 14
+  To Hit Flurry 5: d20 + 9
+  Melee Damage: d10 + 2
+  To Hit Shuriken Flurry 1: d20 + 17
+  To Hit Shuriken Flurry 2: d20 + 17
+  To Hit Shuriken Flurry 3: d20 + 12
+  To Hit Shuriken Flurry 4: d20 + 12
+  To Hit Shuriken Flurry 5: d20 + 7
+  Shuriken Damage: d2
+  CMB: d20 + 13
+  Str: d20 + 0
+  Dex: d20 + 5
+  Con: d20 + 0
+  Int: d20 + 0
+  Wis: d20 + 4
+  Cha: d20 + 0
+  Acrobatics: d20 + 22
+  Athletics: d20 + 17
+  Escape Artist: d20 + 26
+  Stealth: d20 + 36
+
