@@ -2,6 +2,7 @@ import Tkinter
 import random
 import yaml
 from functools import partial
+import random,re
 
 class nat20_tk(Tkinter.Tk):
   def __init__(self,parent):
@@ -12,7 +13,7 @@ class nat20_tk(Tkinter.Tk):
   def initialize(self):
     sheet_stream = open("sheet.yaml", 'r')
     sheet = yaml.load(sheet_stream)
-    
+
     for character, rolls in sheet.iteritems():
       labelframe = Tkinter.LabelFrame(self, text=character)
       labelframe.pack(fill="both", expand="yes")
@@ -21,12 +22,14 @@ class nat20_tk(Tkinter.Tk):
         button = Tkinter.Button(labelframe, text = roll_text + " Roll", command = roll_command)
         button.pack()
 
-    text = Tkinter.Text(self)
-    text.insert(Tkinter.INSERT, "Results:")
-    text.pack()
+    self.text = Tkinter.Text(self)
+    self.text.insert(Tkinter.INSERT, "Results:")
+    self.text.pack()
 
   def do_roll(self, roll):
-    print roll
+    result = re.sub(r'd(\d+)', lambda match: str(random.randint(1, int(match.group(1)))), roll)
+    # weee wooo weee wooo eval
+    self.text.insert(Tkinter.INSERT, "\n" + result + " = " + str(eval(result)))
 
 
 if __name__ == "__main__":
