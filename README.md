@@ -11,6 +11,8 @@ Character Name:
   Roll Name: d20 + 5
   Other Roll Name: 5 * d20 + d4
   Another Roll: d20 - 1
+Additional Character:
+  Init: d20 + 1
 ```
 
 ![](http://i.imgur.com/oEJ9xDV.png)
