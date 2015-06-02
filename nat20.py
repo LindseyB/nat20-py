@@ -17,10 +17,10 @@ class nat20_tk(Tkinter.Tk):
     for character, rolls in sheet.iteritems():
       labelframe = Tkinter.LabelFrame(self, text=character)
       labelframe.pack(fill="both", expand="yes")
-      for roll_text, roll in rolls.iteritems():
+      for index, (roll_text, roll) in enumerate(rolls.iteritems()):
         roll_command = partial(self.do_roll, roll)
         button = Tkinter.Button(labelframe, text = roll_text + " Roll", command = roll_command)
-        button.pack()
+        button.grid(row=index/3, column=index%3)
 
     self.text = Tkinter.Text(self)
     self.text.insert(Tkinter.INSERT, "Results:")
