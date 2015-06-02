@@ -38,7 +38,7 @@ class nat20_tk(Tkinter.Tk):
 
     self.text = Tkinter.Text(self)
     self.text.insert(Tkinter.INSERT, "Results:")
-    self.text.pack()
+    self.text.pack(fill=Tkinter.BOTH, expand=1)
 
   def do_roll(self, roll):
     result = re.sub(r'd(\d+)', lambda match: "(" + str(random.randint(1, int(match.group(1)))) + ")", roll)
