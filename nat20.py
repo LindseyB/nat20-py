@@ -1,4 +1,6 @@
 import Tkinter
+import random
+import yaml
 
 class nat20_tk(Tkinter.Tk):
   def __init__(self,parent):
@@ -7,7 +9,17 @@ class nat20_tk(Tkinter.Tk):
     self.initialize()
 
   def initialize(self):
-    pass 
+    sheet_stream = open("sheet.yaml", 'r')
+    sheet = yaml.load(sheet_stream)
+    
+    for character, rolls in sheet.iteritems():
+      labelframe = Tkinter.LabelFrame(self, text=character)
+      labelframe.pack(fill="both", expand="yes")
+      for roll_text, roll in rolls.iteritems():
+        button = Tkinter.Button(labelframe, text = roll_text + " Roll")
+        button.pack()
+
+
 
 if __name__ == "__main__":
   app = nat20_tk(None)

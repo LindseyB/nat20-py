@@ -1,0 +1,6 @@
+Rook:
+  Init: d20 + 10
+  Perception: d20 + 25
+  Fort: d20 + 11
+  Ref: d20 + 18
+  Will: d20 + 9
