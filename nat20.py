@@ -19,6 +19,11 @@ class nat20_tk(Tkinter.Tk):
         button = Tkinter.Button(labelframe, text = roll_text + " Roll")
         button.pack()
 
+    text = Tkinter.Text(self)
+    text.insert(Tkinter.INSERT, "Results:")
+    text.pack()
+
+
 
 
 if __name__ == "__main__":
