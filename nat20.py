@@ -1,8 +1,9 @@
 import Tkinter
 import random
 import yaml
-from functools import partial
+import time
 import random,re
+from functools import partial
 from collections import OrderedDict
 
 def ordered_load(stream, Loader=yaml.Loader, object_pairs_hook=OrderedDict):
@@ -40,11 +41,29 @@ class nat20_tk(Tkinter.Tk):
     self.text.insert(Tkinter.INSERT, "Results:")
     self.text.pack(fill=Tkinter.BOTH, expand=1)
 
+    photo = Tkinter.PhotoImage(file="d20.gif")
+
+    self.frames = []
+    for frame in range(1, 21):
+      self.frames.append(Tkinter.PhotoImage(file="d20.gif", format="gif -index " + str(frame)))
+
+    self.d20 = Tkinter.Label(self, image=self.frames[0])
+    self.d20.image = self.frames[0]
+
+
   def do_roll(self, roll):
+    self.d20.place(relx=0.5, rely=0.5, anchor=Tkinter.CENTER)
+    for frame in self.frames:
+      time.sleep(0.1)
+      self.d20.configure(image=frame)
+      self.d20.image = frame
+      self.update()
+
     result = re.sub(r'd(\d+)', lambda match: "(" + str(random.randint(1, int(match.group(1)))) + ")", roll)
     # weee wooo weee wooo eval
     self.text.insert(Tkinter.INSERT, "\n" + roll + " = "+ result + " = " + str(eval(result)))
     self.text.see(Tkinter.END)
+    self.d20.place_forget()
 
 
 if __name__ == "__main__":

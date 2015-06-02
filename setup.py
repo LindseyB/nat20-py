@@ -8,7 +8,7 @@ Usage:
 from setuptools import setup
 
 APP = ['nat20.py']
-DATA_FILES = ['sheet.yaml']
+DATA_FILES = ['sheet.yaml', 'd20.gif']
 OPTIONS = {'argv_emulation': True, 'iconfile': 'nat20.icns'}
 
 setup(
