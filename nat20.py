@@ -54,7 +54,7 @@ class nat20_tk(Tkinter.Tk):
   def do_roll(self, roll):
     self.d20.place(relx=0.5, rely=0.5, anchor=Tkinter.CENTER)
     for frame in self.frames:
-      time.sleep(0.1)
+      time.sleep(0.025)
       self.d20.configure(image=frame)
       self.d20.image = frame
       self.update()
