@@ -1,6 +1,7 @@
 import Tkinter
 import random
 import yaml
+from functools import partial
 
 class nat20_tk(Tkinter.Tk):
   def __init__(self,parent):
@@ -16,14 +17,16 @@ class nat20_tk(Tkinter.Tk):
       labelframe = Tkinter.LabelFrame(self, text=character)
       labelframe.pack(fill="both", expand="yes")
       for roll_text, roll in rolls.iteritems():
-        button = Tkinter.Button(labelframe, text = roll_text + " Roll")
+        roll_command = partial(self.do_roll, roll)
+        button = Tkinter.Button(labelframe, text = roll_text + " Roll", command = roll_command)
         button.pack()
 
     text = Tkinter.Text(self)
     text.insert(Tkinter.INSERT, "Results:")
     text.pack()
 
-
+  def do_roll(self, roll):
+    print roll
 
 
 if __name__ == "__main__":
